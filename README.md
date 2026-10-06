@@ -1,28 +1,41 @@
-# Motion-S-Text-to-Sign-Motion-Generation-Signvrse
-Build a model that translates English/glossified text into realistic 3D sign language animations by generating hierarchical motion tokens that can be decoded into fluid avatar animations.
+# SignVerse — Motion-S: Text-to-Sign Motion Generation
 
-## Local Run
+SignVerse is a deep learning project focused on generating realistic 3D sign language motion from English or glossified text.
 
-The pipeline now auto-detects a dataset folder that contains `train.csv` and `test.csv`, including the attached `motion-s-hierarchical-text-to-motion-generation-for-sign-language` directory in this workspace.
+The project explores a text-to-motion generation pipeline in which textual input is transformed into structured motion representations and hierarchical motion tokens. These representations can then be processed, reconstructed, and visualized as skeletal or 3D sign language motion.
 
-If you want to override detection, set `MOTION_S_DATA_ROOT` to the folder that contains `train.csv`, `test.csv`, `sample_submission.csv`, and `Motion-Features/`.
+The overall objective is to bridge the gap between natural language and human-like sign language movement using machine learning, motion representation, and 3D visualization techniques.
 
-Install the Python dependencies first if your local interpreter does not already have them:
+---
 
-```bash
-pip install -r requirements.txt
-```
+## 📌 Project Overview
 
-Run the source module directly for a smoke test:
+Sign language involves complex and coordinated movements of the hands, arms, body, and other articulators. Converting textual information into realistic sign language motion is therefore a challenging text-to-motion generation problem.
 
-```bash
-python motion_s_token_generation_pipeline.py
-```
+This project implements a pipeline for processing text and motion data and generating structured motion representations that can be decoded and visualized.
 
-For notebook use, import the module and build a config from there:
+### High-Level Pipeline
 
-```python
-from motion_s_token_generation_pipeline import MotionSConfig, run_training_pipeline, run_inference_pipeline
-
-cfg = MotionSConfig()
-```
+```text
+        English / Glossified Text
+                  │
+                  ▼
+          Text Processing
+                  │
+                  ▼
+       Motion Representation
+                  │
+                  ▼
+      Hierarchical Motion Tokens
+                  │
+                  ▼
+        Motion Generation
+                  │
+                  ▼
+       Motion Reconstruction
+                  │
+                  ▼
+        Skeleton / BVH Motion
+                  │
+                  ▼
+          3D Visualization
