@@ -186,9 +186,6 @@ SignVerse-Motion-S-Text-to-Sign-Motion-Generation/
 ├── loss_curve.png
 │   └── Training loss visualization
 │
-├── Project_Report_DL_.pdf
-│   └── Detailed project report
-│
 ├── requirements.txt
 │   └── Python dependencies
 │
